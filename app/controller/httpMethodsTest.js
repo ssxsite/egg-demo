@@ -21,6 +21,16 @@ class HttpMethodsTestController extends Controller {
             id
         }
     }
+
+    /* delete 方法用来修改数据 */
+    async deleteTest() {
+        const { ctx } = this;
+        console.log('deleteTest',ctx.params.name);
+        const {name} = ctx.params;
+        ctx.body = {
+            name
+        }
+    }
 }
 
 module.exports = HttpMethodsTestController;

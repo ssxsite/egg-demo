@@ -33,4 +33,4 @@ $ npm stop
 [egg]: https://eggjs.org
 
 
-### egg支持的各种http methods 查看httpMethodsTest.js
+### 1.egg支持的各种http methods 查看httpMethodsTest.js
