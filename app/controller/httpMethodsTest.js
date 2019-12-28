@@ -15,11 +15,10 @@ class HttpMethodsTestController extends Controller {
     /* put 方法用来修改数据 */
     async putTest() {
         const { ctx } = this;
-        console.log('putTest',ctx.request.body);
-        const {name,weight} = ctx.request.body;
+        console.log('putTest',ctx.params.id);
+        const {id} = ctx.params;
         ctx.body = {
-            name,
-            weight
+            id
         }
     }
 }
