@@ -14,4 +14,5 @@ module.exports = app => {
   router.put('/httpMethodsTest/put/:id', controller.httpMethodsTest.putTest);
   router.delete('/httpMethodsTest/delete/:name', controller.httpMethodsTest.deleteTest);
   router.get('/user/:id', controller.user.info);
+  router.get('/view-test', controller.viewTest.index);
 };

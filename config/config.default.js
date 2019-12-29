@@ -44,6 +44,12 @@ module.exports = appInfo => {
     //load into agent,default is close //加载到代理中，默认值为“关闭”
     agent:false,
   };
+  config.view ={
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.html': 'nunjucks',
+    },
+  };
 
   // add your user config here
   const userConfig = {
