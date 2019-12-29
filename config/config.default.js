@@ -40,7 +40,7 @@ module.exports = appInfo => {
       database:'exam'
     },
     //load into app,default is open //加载到应用程序，默认为打开
-    app:true,
+    app:false,
     //load into agent,default is close //加载到代理中，默认值为“关闭”
     agent:false,
   };
