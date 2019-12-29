@@ -34,3 +34,4 @@ $ npm stop
 
 
 ### 1.egg支持的各种http methods 查看httpMethodsTest.js
+### 2.service 执行mysql查询语句，user.js

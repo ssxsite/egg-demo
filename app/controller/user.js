@@ -3,8 +3,9 @@ class UserController extends Controller {
   async info() {
     const { ctx } = this;
     const userId = ctx.params.id;
-    // const userInfo = await ctx.service.user.find(userId);
-    ctx.body = userId;
+    const userInfo = await ctx.service.user.find(userId);
+    console.log(userInfo)
+    ctx.body = userInfo;
   }
 }
 module.exports = UserController;

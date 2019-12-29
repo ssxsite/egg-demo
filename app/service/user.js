@@ -8,17 +8,14 @@ class UserService extends Service {
   // }
   async find(uid) {
     // 假如 我们拿到用户 id 从数据库获取用户详细信息
-    const user = await this.app.mysql.select('emp', {
-      where:{id:uid}
-    });
-
+    const user = await this.app.mysql.query('select * from emp where empno = ?', uid);
+    console.log('user---2',user[0])
     // 假定这里还有一些复杂的计算，然后返回需要的信息。
-    const picture = await this.getPicture(uid);
+    // const picture = await this.getPicture(uid);
 
     return {
-      name: user.ename,
-      job: user.job,
-      picture,
+      name: user[0].ename,
+      job: user[0].job
     };
   }
 
